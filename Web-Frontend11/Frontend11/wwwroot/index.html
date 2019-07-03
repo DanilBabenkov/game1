@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="/Style.css" />
+    <link rel="stylesheet" type="text/css" href="/vendor.min.css" />
+    <script type="text/javascript" src="JavaScript.js"></script>
+    <script type="text/javascript" src="/vendor.min.js"></script>
+
+    <title></title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <!-- Brand/logo -->
+            <a class="navbar-brand" href="#">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkYrCYlozOHghVe_7VPL695c7wzklyDrNb8cSHSYHM1_e-qkEj0A" alt="logo" style="width:40px;">
+            </a>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbar1">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">ХП:<span id="xp">100</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Ловкость:<span id="lov">50</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Сила:<span id="sil">30</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Ум:<span id="ym">28</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Атака:<span id="attack">36</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Защита:<span id="zaz">14</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">МП:<span id="mp">5</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Голод:<span id="hungry">100</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Cписок:<span id="spick">0</span></a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">                   
+                        <a class="nav-link" href="#">Money:<span id="money">1000</span></a>
+                    <!--<button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>-->
+                </form>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 bg-success">
+                <div class="col-12 meh">
+                    <div class="row">
+                        <div class="col-2">
+                            <img title="Aтака:50, Сила:15" src="data:image/jpeg;base64,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" />
+                            <span class="atack" style="display:none;">50</span>
+                            <span class="sila" style="display:none;">15</span>
+                        </div>
+                        <div class="col-3">Алмазный меч</div>
+                        <div class="col-7"><button class="but">В инвентарь</button></div>
+                    </div>
+                </div>
+                <div class="col-12 meh">
+                    <div class="row">
+                        <div class="col-2">
+                            <img title="Aтака:30, Сила:8" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSReUMem_Mnenv2rkLKK-WfdVc0BXXEqkSoK3B3_Vjue509JZSZbw" />
+                            <span class="atack" style="display:none;">30</span>
+                            <span class="sila" style="display:none;">8</span>
+                        </div>
+                        <div class="col-3">Золотой меч</div>
+                        <div class="col-7"><button class="but">В инвентарь</button></div>
+                    </div>
+                </div>
+                <div class="col-12 meh">
+                    <div class="row">
+                        <div class="col-2">
+                            <img title="Aтака:20, Сила:3" src="data:image/jpeg;base64,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" />
+                            <span class="atack" style="display:none;">20</span>
+                            <span class="sila" style="display:none;">3</span>
+                        </div>
+                        <div class="col-3">Серебряный меч</div>
+                        <div class="col-7"><button class="but">В инвентарь</button></div>
+                    </div>
+                </div>
+                <div class="col-12 trs">
+                    <div class="row">
+                        <div class="col-2">
+                            <img title="Защита:50, ХП:20, Ум:5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCUSXX7NiBeLq3ZHG5tm0RRCIU2VCpHiwLWHTt3blwVujBtUHw1w" />
+                            <span class="zas" style="display:none;">50</span>
+                            <span class="xpi" style="display:none;">20</span>
+                            <span class="um" style="display:none;">5</span>
+                        </div>
+                        <div class="col-3">Алмазный торс</div>
+                        <div class="col-7"><button class="but">В инвентарь</button></div>
+                    </div>
+                </div>
+                <div class="col-12 nog">
+                    <div class="row">
+                        <div class="col-2">
+                            <img title="Защита:20, ХП:10, Ловкость:30" src="data:image/jpeg;base64,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" />
+                            <span class="zas" style="display:none;">20</span>
+                            <span class="xpi" style="display:none;">10</span>
+                            <span class="lovk" style="display:none;">30</span>
+                        </div>
+                        <div class="col-3">Алмазные штаны</div>
+                        <div class="col-7"><button class="but">В инвентарь</button></div>
+                    </div>
+                </div>
+                <div class="col-12 trs">
+                    <div class="row">
+                        <div class="col-2">
+                            <img title="Защита:35, ХП:12, Ум:4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY0ZDAtMYgsBAounBc4Z5Am9hYKm5RKDDi1vdZZf0jmTWLaghrUA" />
+                            <span class="zas" style="display:none;">35</span>
+                            <span class="xpi" style="display:none;">12</span>
+                            <span class="um" style="display:none;">4</span>
+                        </div>
+                        <div class="col-3">Серебряный торс</div>
+                        <div class="col-7"><button class="but">В инвентарь</button></div>
+                    </div>
+                </div>
+                <div class="col-12 trs">
+                    <div class="row">
+                        <div class="col-2">
+                            <img title="Защита:20, ХП:10, Ум:3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG60mtyhAllyq2PUJ11275afXyrkfneeCD1E94wJAyPcLKiuN5bA" />
+                            <span class="zas" style="display:none;">20</span>
+                            <span class="xpi" style="display:none;">10</span>
+                            <span class="um" style="display:none;">3</span>
+                        </div>
+                        <div class="col-3">Бронзовый торс</div>
+                        <div class="col-7"><button class="but">В инвентарь</button></div>
+                    </div>
+                </div>
+                <div class="col-12 trs">
+                    <div class="row">
+                        <div class="col-2">
+                            <img title="Защита:10, ХП:2, Ум:1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvMScyj4TEJoYLf2kFxRiIBceL0fYd1t_lI8z3OokRA4V0iNE3gA" />
+                            <span class="zas" style="display:none;">10</span>
+                            <span class="xpi" style="display:none;">2</span>
+                            <span class="um" style="display:none;">1</span>
+                        </div>
+                        <div class="col-3">Золотой торс</div>
+                        <div class="col-7"><button class="but">В инвентарь</button></div>
+                    </div>
+                </div>
+                <div class="col-12 colc">
+                    <div class="row">
+                        <div class="col-2">
+                            <img title="Защита:200, ХП:50, Ловкость:13, МП:1, Атака:98, Голод:18" src="https://i.ytimg.com/vi/Drkgy6OMFo8/hqdefault.jpg" />
+                            <span class="zas" style="display:none;">200</span>
+                            <span class="xpi" style="display:none;">50</span>
+                            <span class="lovk" style="display:none;">13</span>
+                            <span class="mpi" style="display:none;">1</span>
+                            <span class="atack" style="display:none;">98</span>
+                            <span class="hun" style="display:none;">18</span>
+                        </div>
+                        <div class="col-3">Кольцо смерти</div>
+                        <div class="col-7"><button class="but">В инвентарь</button></div>
+                    </div>
+                </div>
+                <div class="col-12 colc">
+                    <div class="row">
+                        <div class="col-2">
+                            <img title="Защита:50, ХП:400, Ловкость:10, МП:8, Атака:44, Голод:16" src="https://gamepedia.cursecdn.com/dota2_gamepedia/3/3b/Ring_of_Protection_icon.png?version=a942b27c51ef93e9f33d34647034212b" />
+                            <span class="zas" style="display:none;">50</span>
+                            <span class="xpi" style="display:none;">400</span>
+                            <span class="lovk" style="display:none;">10</span>
+                            <span class="mpi" style="display:none;">8</span>
+                            <span class="atack" style="display:none;">44</span>
+                            <span class="hun" style="display:none;">16</span>
+                        </div>
+                        <div class="col-3">Кольцо волдеморта</div>
+                        <div class="col-7"><button class="but">В инвентарь</button></div>
+                    </div>
+                </div>
+                <div class="col-12 colc">
+                    <div class="row">
+                        <div class="col-2">
+                            <img title="Защита:2, ХП:150, Ловкость:4, МП:10, Атака:2, Голод:6" src="http://dota.by/files/dota2/icons/items-large/ring_of_basilius_lg.png" />
+                            <span class="zas" style="display:none;">2</span>
+                            <span class="xpi" style="display:none;">150</span>
+                            <span class="lovk" style="display:none;">4</span>
+                            <span class="mpi" style="display:none;">10</span>
+                            <span class="atack" style="display:none;">2</span>
+                            <span class="hun" style="display:none;">6</span>
+                        </div>
+                        <div class="col-3">Кольцо воскрешения</div>
+                        <div class="col-7"><button class="but">В инвентарь</button></div>
+                    </div>
+                </div>
+                <div class="col-12 colc">
+                    <div class="row">
+                        <div class="col-2">
+                            <img title="Защита:20, ХП:100, Ловкость:4, МП:2, Атака:6, Голод:1" src="https://i.pinimg.com/736x/87/aa/5f/87aa5f40b0a940f63e8dd95c848a9043--nerd-room-dota-.jpg" />
+                            <span class="zas" style="display:none;">20</span>
+                            <span class="xpi" style="display:none;">100</span>
+                            <span class="lovk" style="display:none;">4</span>
+                            <span class="mpi" style="display:none;">2</span>
+                            <span class="atack" style="display:none;">6</span>
+                            <span class="hun" style="display:none;">1</span>
+                        </div>
+                        <div class="col-3">Кольцо времени</div>
+                        <div class="col-7"><button class="but">В инвентарь</button></div>
+                    </div>
+                </div>
+                <div class="col-12 shlm">
+                    <div class="row">
+                        <div class="col-2">
+                            <img title="Защита:30, ХП:20, Ловкость:50" src="data:image/jpeg;base64,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" />
+                            <span class="zas" style="display:none;">30</span>
+                            <span class="xpi" style="display:none;">20</span>
+                            <span class="um" style="display:none;">50</span>
+                        </div>
+                        <div class="col-3">Алмазный шлем</div>
+                        <div class="col-7"><button class="but">В инвентарь</button></div>
+                    </div>
+                </div>
+                <div class="col-12 shlm">
+                    <div class="row">
+                        <div class="col-2">
+                            <img title="Защита:20, ХП:10, Ум:35" src="data:image/jpeg;base64,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" />
+                            <span class="zas" style="display:none;">20</span>
+                            <span class="xpi" style="display:none;">10</span>
+                            <span class="um" style="display:none;">35</span>
+                        </div>
+                        <div class="col-3">Бронзовый шлем</div>
+                        <div class="col-7"><button class="but">В инвентарь</button></div>
+                    </div>
+                </div>
+                <div class="col-12 nog">
+                    <div class="row">
+                        <div class="col-2">
+                            <img title="Защита:15, ХП:15, Ловкость:40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAMAAAAL34HQAAAAD1BMVEX///8tLS0ZGRnbohPq7lcQ6mpJAAAAqUlEQVR4nO3Uuw7DIBBFQYPz/9+cBppNViA/kC3N6ZDWV1N52yRJkiRJkqSLK0mTd1hYWFjLWH3309pbtTV5n51jYWFh3cbq71lWuMfCwsJaznro7xQLCwsLCwsLCwsLCwtrFavN9+dRVqiEWSwsLKzTrJLs7qERq98lMzX7HgsLC+swKzoGnFi/G8xgYWFhXceq/5uc+eFlYWFhYZ1lSZIkSZIkSZL0+r7oVjARIxXrtQAAAABJRU5ErkJggg==" />
+                            <span class="zas" style="display:none;">15</span>
+                            <span class="xpi" style="display:none;">15</span>
+                            <span class="lovk" style="display:none;">40</span>
+                        </div>
+                        <div class="col-3">Золотые штаны</div>
+                        <div class="col-7"><button class="but">В инвентарь</button></div>
+                    </div>
+                </div>
+                <div class="col-12 eda">
+                    <div class="row">
+                        <div class="col-2">
+                            <img title="Плюс к:ХП:15, Голод:40" src="data:image/jpeg;base64,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" />                           
+                            <span class="xpi" style="display:none;">15</span>
+                            <span class="hun" style="display:none;">40</span>
+                        </div>
+                        <div class="col-3">Зеленое Яблоко</div>
+                        <div class="col-7"><button class="but">В инвентарь</button></div>
+                    </div>
+                </div>
+                <div class="col-12 eda">
+                    <div class="row">
+                        <div class="col-2">
+                            <img title="Плюс к:ХП:15, Голод:50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_c8u85Ro0OuowxwZCpHbWcGN8JsaO9hxSUmR1cdshNy9kfp8-gQ" />
+                            
+                            <span class="xpi" style="display:none;">15</span>
+                            <span class="hun" style="display:none;">50</span>
+                        </div>
+                        <div class="col-3">Желтое яблоко</div>
+                        <div class="col-7"><button class="but">В инвентарь</button></div>
+                    </div>
+                </div>
+                <div class="col-12 potion">
+                    <div class="row">
+                        <div class="col-2">
+                            <img title="Плюс к:Защита:15, ХП:15, Ловкость:40" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0MjTEXlQ4DQdlrqBEXWG94s2Uzbx8Cw6girWrdt4uuYmJoFAG" />
+                            <span class="zas" style="display:none;">15</span>
+                            <span class="xpi" style="display:none;">15</span>
+                            <span class="lovk" style="display:none;">40</span>
+                        </div>
+                        <div class="col-3">Зелье варенье</div>
+                        <div class="col-7"><button class="but">В инвентарь</button></div>
+                    </div>
+                </div>
+                <div class="col-12 potion">
+                    <div class="row">
+                        <div class="col-2">
+                            <img title="Плюс к:Защита:25, ХП:45, Ловкость:30" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNP2WpsGcLDuQXA5AsCl3c7e8dGDmxgpJkoFWDdBvk2CWfbbUL" />
+                            <span class="zas" style="display:none;">25</span>
+                            <span class="xpi" style="display:none;">45</span>
+                            <span class="lovk" style="display:none;">30</span>
+                        </div>
+                        <div class="col-3">Красное зелье</div>
+                        <div class="col-7"><button class="but">В инвентарь</button></div>
+                    </div>
+                </div>
+                <div class="col-12 poison">
+                    <div class="row">
+                        <div class="col-2">
+                            <img title="Отнимает:Атака:15, ХП:15" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMvtlXDYRn91KWEbR_cRPMBjkWrSRhHuuQRxYQAkb3eCciFo2sJg" />
+                            <span class="zas" style="display:none;">15</span>
+                            <span class="xpi" style="display:none;">15</span>
+                            
+                        </div>
+                        <div class="col-3">Ядовитый яд</div>
+                        <div class="col-7"><button class="but">В инвентарь</button></div>
+                    </div>
+                </div>
+                <div class="col-12 poison">
+                    <div class="row">
+                        <div class="col-2">
+                            <img title="Отнимает:Атака:15, ХП:25" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkJaENRcW9njr0K9Gc_n_3DQtiUqNrve4oeIcqg7vHhPnj-nwzLWZ3N2I" />
+                            <span class="zas" style="display:none;">15</span>
+                            <span class="xpi" style="display:none;">25</span>
+                            
+                        </div>
+                        <div class="col-3">Супер мега яд</div>
+                        <div class="col-7"><button class="but">В инвентарь</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 bg-secondary">
+                <h5 class="panel-heading">Инвентарь:</h5>
+                <div class="row">
+                    <div class="col-6">
+                        <h5>Неэкипированные вещи</h5>
+
+                    </div>
+                    <div class="col-6">
+                        <h5>Экипированные вещи</h5>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--div class="row">
+        <div class="col-md-6 col-xl-4 a1">A1</div>
+        <div class="col-md-6 col-xl-4 a2">A2</div>
+        <div class="col-md-6 col-xl-4 a3">A3</div>
+        <div class="col-md-6 col-xl-4 a4">A4</div>
+        <div class="col-md-6 col-xl-4 a5">A5</div>
+        <div class="col-md-6 col-xl-4 a6">A6</div>
+    </div>-->
+</body>
+</html>

@@ -1,0 +1,11 @@
+C:\Users\пк\Source\Repos\Web-Frontend11\Frontend11\bin\Debug\netcoreapp2.0\Frontend11.deps.json
+C:\Users\пк\Source\Repos\Web-Frontend11\Frontend11\bin\Debug\netcoreapp2.0\Frontend11.runtimeconfig.json
+C:\Users\пк\Source\Repos\Web-Frontend11\Frontend11\bin\Debug\netcoreapp2.0\Frontend11.runtimeconfig.dev.json
+C:\Users\пк\Source\Repos\Web-Frontend11\Frontend11\bin\Debug\netcoreapp2.0\Frontend11.dll
+C:\Users\пк\Source\Repos\Web-Frontend11\Frontend11\bin\Debug\netcoreapp2.0\Frontend11.pdb
+C:\Users\пк\Source\Repos\Web-Frontend11\Frontend11\obj\Debug\netcoreapp2.0\Frontend11.csprojAssemblyReference.cache
+C:\Users\пк\Source\Repos\Web-Frontend11\Frontend11\obj\Debug\netcoreapp2.0\Frontend11.csproj.CoreCompileInputs.cache
+C:\Users\пк\Source\Repos\Web-Frontend11\Frontend11\obj\Debug\netcoreapp2.0\Frontend11.AssemblyInfoInputs.cache
+C:\Users\пк\Source\Repos\Web-Frontend11\Frontend11\obj\Debug\netcoreapp2.0\Frontend11.AssemblyInfo.cs
+C:\Users\пк\Source\Repos\Web-Frontend11\Frontend11\obj\Debug\netcoreapp2.0\Frontend11.dll
+C:\Users\пк\Source\Repos\Web-Frontend11\Frontend11\obj\Debug\netcoreapp2.0\Frontend11.pdb
